@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cctva87ers143"]
+[gd_scene load_steps=5 format=3 uid="uid://cctva87ers143"]
 
 [ext_resource type="Texture2D" uid="uid://nrvh0rmqmawy" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://ffahjgaxph3v" path="res://player_2d.tscn" id="2_0e48y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e48y"]
 texture = ExtResource("1_wtcfe")
@@ -83,3 +84,10 @@ tile_set = SubResource("TileSet_epypp")
 collision_animatable = true
 format = 2
 layer_0/tile_data = PackedInt32Array(-196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -4, 0, 0, 65532, 0, 0, 131069, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 65538, 0, 0, 3, 0, 0, -65533, 0, 0, -458751, 0, 0, -524286, 0, 0, -589821, 0, 0, -393218, 0, 0, -458755, 0, 0, -524292, 0, 0)
+
+[node name="Player2D" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(-114, -1091)
+
+[node name="Camera2D" type="Camera2D" parent="Player2D"]
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
